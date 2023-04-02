@@ -199,6 +199,10 @@ class Menu(object):
         self.font = pygame.font.Font(ttf_font, font_size)
 
     def display_frame(self, screen):
+        # add background image
+        background = pygame.image.load("PACMAN.png")
+        screen.blit(background, (0, 0))
+
         for index, item in enumerate(self.items):
             if self.state == index:
                 label = self.font.render(item, True, self.select_color)
