@@ -139,12 +139,17 @@ class Game(object):
         # --- Drawing code should go here
         if self.game_over:
             if self.about:
-                self.display_message(screen, "It is an arcade Game")
-                # "a maze containing various dots,\n"
-                # known as Pac-Dots, and four ghosts.\n"
-                # "The four ghosts roam the maze, trying to kill Pac-Man.\n"
-                # "If any of the ghosts hit Pac-Man, he loses a life;\n"
-                # "the game is over.\n")
+                '''
+                write this in the about section
+                '''
+                background = pygame.image.load("about.png")
+                screen.blit(background, (0, 0))
+
+
+
+
+
+
             else:
                 self.menu.display_frame(screen)
         else:
